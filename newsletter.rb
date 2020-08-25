@@ -61,10 +61,11 @@ def print_recipients
   counter = 0
   while counter < recipients.length do 
     if counter == recipients.length - 1
-      puts "#{recipients[counter]}"
+      print "#{recipients[counter]}\n"
     
     else 
-      puts "#{recipients[counter]}, "  
+      print "#{recipients[counter]}, "  
+    
     end 
     counter +=1
   end
