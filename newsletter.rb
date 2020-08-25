@@ -76,7 +76,7 @@ def print_one_article(article)
   # and print the title, author and text as a formatted string
   # See the README/sample output for examples
 
-  print "#{article[:title]}\nby: #{article[:author]}\n#{article[:text]}\n"
+  print "#{article[:title]}\nby: #{article[:author]}\n#{article[:text]}\n\n"
 
   # the below code does the same thing as the line above
   # puts article[:title]
@@ -84,12 +84,16 @@ def print_one_article(article)
   # puts article[:text]
 end
 
-print_one_article({"author": "Destiny Blanda Bruen II", "title": "Mining", "text": "The orthogonal features, when combined, can explode into complexity."})
 
 def print_many_articles(articles)
   # Write a method that will take in an array of article hashes
   # and format each one using the print_one_article method
+  articles.each do |article|
+    print_one_article(article)
+   
+  end
   
+
 end
 
 def format_campus_location(campus)
