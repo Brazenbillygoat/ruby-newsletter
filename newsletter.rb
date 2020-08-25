@@ -39,15 +39,15 @@ def calculate_recipients
         unsubscribed = true 
       end
     end 
-    if unsubscribed == true 
+    if unsubscribed == false 
       subscribers << subscriber
     end
     
   end 
-  puts subscribers 
+  subscribers 
 
 end
-calculate_recipients
+
 
 def first_n_articles(number_of_articles)
   ARTICLES.first(number_of_articles)
@@ -57,7 +57,17 @@ def print_recipients
   # Write a method that uses the output of calculate_recipients
   # and returns a list of emails separated by commas
   # Ex) "abc@email.com, def@email.com, ghi@email.com"
-
+  recipients = calculate_recipients  
+  counter = 0
+  while counter < recipients.length do 
+    if counter == recipients.length - 1
+      puts "#{recipients[counter]}"
+    
+    else 
+      puts "#{recipients[counter]}, "  
+    end 
+    counter +=1
+  end
 end
 
 def print_one_article(article)
